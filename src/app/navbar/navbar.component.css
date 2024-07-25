@@ -1,0 +1,76 @@
+nav {
+    padding-top: 16px;
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 32px;
+    width: 40px;
+    transition: width 0.3s ease-in-out;
+}
+img {
+    width: 24px;
+    height: 24px;
+    filter: drop-shadow(1px 1px white) drop-shadow(-1px -1px white) drop-shadow(1px -1px white) drop-shadow(-1px 1px white);
+}
+nav:hover{
+    width: 180px;
+}
+nav:hover .nav-name{
+    animation: slideIn 0.3s forwards;
+}
+nav:not(:hover) .nav-name{
+    animation: slideOut 0.3s forwards;
+}
+.nav-name {
+    opacity: 0;
+    text-align: left;
+    width: 120px;
+    margin-left: 12px;
+    margin-bottom: 0;
+    margin-top: 0;
+    align-content: center;
+    transform: translateX(200px);
+}
+a {
+    display: flex;
+    color: white;
+    gap: 16px;
+    padding: 8px;
+}
+a:hover{
+    text-shadow: 1px 1px 5px white, -1px 1px 5px white,1px -1px 5px white,-1px -1px 5px white;
+}
+a:hover img{
+    filter: drop-shadow(1px 1px 5px white) drop-shadow(-1px -1px 5px white) drop-shadow(1px -1px 5px white) drop-shadow(-1px 1px 5px white);
+}
+
+@keyframes slideIn {
+    0%{
+        opacity: 0;
+        display: block;
+        transform: translateX(200px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slideOut {
+    0%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    50%{
+        opacity: 0;
+    }
+    99%{
+        transform: translateX(200px);
+    }
+    100%{
+        display: none;
+    }
+}
