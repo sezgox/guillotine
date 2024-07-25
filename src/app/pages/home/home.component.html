@@ -1,0 +1,16 @@
+
+
+<img
+    *ngFor="let image of images; let i = index"
+    [src]="image"
+    [class.visible]="currentIndex === i"
+    class="image"
+/>
+<div class="header">
+    <h1>La guillotine</h1>
+</div>
+<div class="social">
+    <a href="spotify/laguillotine" target="_blank"><img src="../../../assets/icons/Spotify.png" alt=""></a>
+    <a href="youtube/laguillotine" target="_blank"><img src="../../../assets/icons/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free.png" alt=""></a>
+    <a href="instagram/laguillotine" target="_blank"><img src="../../../assets/icons/62-instagram-512.png" alt=""></a>
+</div>

@@ -1,6 +1,7 @@
 nav {
     padding-top: 16px;
     position: fixed;
+    top: 0;
     right: 0;
     height: 100vh;
     background-color: black;
@@ -17,7 +18,7 @@ img {
     filter: drop-shadow(1px 1px white) drop-shadow(-1px -1px white) drop-shadow(1px -1px white) drop-shadow(-1px 1px white);
 }
 nav:hover{
-    width: 180px;
+    width: 200px;
 }
 nav:hover .nav-name{
     animation: slideIn 0.3s forwards;
@@ -28,7 +29,7 @@ nav:not(:hover) .nav-name{
 .nav-name {
     opacity: 0;
     text-align: left;
-    width: 120px;
+    width: 140px;
     margin-left: 12px;
     margin-bottom: 0;
     margin-top: 0;
@@ -42,10 +43,10 @@ a {
     padding: 8px;
 }
 a:hover{
-    text-shadow: 1px 1px 5px white, -1px 1px 5px white,1px -1px 5px white,-1px -1px 5px white;
+    text-shadow: 0px 0px 5px white;
 }
 a:hover img{
-    filter: drop-shadow(1px 1px 5px white) drop-shadow(-1px -1px 5px white) drop-shadow(1px -1px 5px white) drop-shadow(-1px 1px 5px white);
+    filter: drop-shadow(0px 0px 5px white) drop-shadow(1px 1px white) drop-shadow(-1px -1px white) drop-shadow(1px -1px white) drop-shadow(-1px 1px white);
 }
 
 @keyframes slideIn {
